@@ -1,0 +1,26 @@
+- name: Install Docker
+  gather_facts: false
+  become: yes
+  hosts: docker
+  roles:
+    - docker
+  tags:
+    - docker
+
+- name: Deploy nginx
+  gather_facts: false
+  become: yes
+  hosts: nginx
+  roles:
+    - nginx
+  tags:
+    - nginx
+
+- name: Configure nginx
+  gather_facts: false
+  become: yes
+  hosts: nginx_conf
+  roles:
+    - nginx_conf
+  tags:
+    - nginx_conf

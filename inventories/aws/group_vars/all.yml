@@ -1,0 +1,3 @@
+ec2_access_key: YOUR_ACCESS_KEY
+ec2_secret_key: YOUR_SECRET_KEY
+key_name: YOUR_AWS_PEM_FILENAME

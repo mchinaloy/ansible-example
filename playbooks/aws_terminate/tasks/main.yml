@@ -1,0 +1,8 @@
+- name: Terminate AWS instance(s)
+  gather_facts: false
+  connection: local
+  hosts: localhost
+  roles:
+    - {role: terminate_aws, name: 'ansible', count: 1}
+  tags:
+    - terminate_aws

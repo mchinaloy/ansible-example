@@ -1,0 +1,14 @@
+
+[ansible_example]
+54.194.170.195 private_ip=172.31.38.153 ansible_connection=ssh
+
+
+[docker:children]
+ansible_example
+
+[nginx:children]
+ansible_example
+
+[nginx_conf:children]
+ansible_example
+

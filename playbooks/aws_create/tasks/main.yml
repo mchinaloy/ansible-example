@@ -1,0 +1,8 @@
+- name: Create AWS instance(s)
+  gather_facts: false
+  connection: local
+  hosts: localhost
+  roles:
+    - {role: create_aws, name: 'ansible_example', count: 1}
+  tags:
+    - create_aws

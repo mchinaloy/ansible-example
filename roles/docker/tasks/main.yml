@@ -1,0 +1,8 @@
+- name: Install docker dependencies
+  shell: pip install docker-py==1.9.0
+
+- name: Install docker
+  yum: name=docker state=latest
+
+- name: Start docker
+  service: name=docker state=started

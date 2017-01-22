@@ -1,0 +1,10 @@
+# Gather facts about all ec2 instances
+- ec2_remote_facts:
+    aws_access_key: "{{ ec2_access_key  }}"
+    aws_secret_key: "{{ ec2_secret_key  }}"
+    region: eu-west-1
+  register: ec2_facts
+
+- name: Debug
+  debug:
+    msg: "{{ ec2_facts }}"
