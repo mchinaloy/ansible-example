@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Updating inventory..."
+
 getIpAddresses() {
 echo `aws ec2 describe-instances | jq '.Reservations[].Instances[] | select(.State.Code != 48) | select(.Tags[] | select(.Key=="Name") | select(.Value == "ansible_example")) | [(.PrivateIpAddress),(.PublicIpAddress)]'`
 }
@@ -22,3 +24,5 @@ ansible_example
 [nginx_conf:children]
 ansible_example
 " >> inventories/aws/aws.yml
+
+echo "Finished Updating inventory"
