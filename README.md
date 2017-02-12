@@ -2,6 +2,9 @@
 
 This is project demonstrates how we can use the IT automation tool Ansible to create AWS hosts and deploy an Nginx container.
 
+### Pre-requisites
+1. Ansible version 2.1.1.0
+
 ### How to use this project
 
 1. Create an AWS account
@@ -19,4 +22,4 @@ This is project demonstrates how we can use the IT automation tool Ansible to cr
 ./scripts/cluster.sh terminate
 ```
 
-Note * There is a secrets file included to demonstrate how we can use ansible-vault but it is not required for this example.
+*Note * There is a secrets file included to demonstrate how we can use ansible-vault but it is not required for this example.*
