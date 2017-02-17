@@ -4,7 +4,8 @@ This is project demonstrates how we can use the IT automation tool Ansible to cr
 
 ### Pre-requisites
 1. Ansible version 2.1.1.0
-2. AWS account with PEM, Key and Secrets known
+2. AWS Cli tools
+3. AWS account with PEM, Key and Secrets known
 
 ### How to use this project
 
